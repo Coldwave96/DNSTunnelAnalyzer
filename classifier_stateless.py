@@ -30,7 +30,7 @@ for file in malicious_files_list:
     file_df['label'] = 1
     dataset_df = pd.concat([dataset_df, file_df], ignore_index=True)
 
-print("[*] Done!\n\n[*]Processing datasets...")
+print("[*] Done!\n\n[*] Processing datasets...")
 dataset_df = shuffle(dataset_df)
 dataset_df = dataset_df.drop(labels=['timestamp'], axis=1)
 dataset_df = dataset_df.fillna(0)
